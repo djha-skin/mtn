@@ -1,6 +1,26 @@
 Multiple Table Notation, version 2.1.0
 --------------------------------------
 
+Make it so it can basically parse markdown in a specific format. 
+
+Stuff that's not tables or second level headers are ignored.
+
+first level headers is the collection name. there can only be one first level header. 
+
+second level headers are table names. 
+
+first paragraph is table description. can contain anything other than a table or triple backtics, which is reserved for future use.
+
+It is an error to have more than one table per second level heading.
+
+column names are separated with a pipe/dash line.
+
+strings may backslash pipes and whitespace but cannot be quoted.
+
+empty cells are nil. t/f and JSON numbers.
+
+that's enough.
+
 EDIT: I have recently taken renewed interest in MTN for a project In working on. Watch this space for updates.
 
 Multiple Table Notation is a format for communicating multiple tables at once
@@ -27,6 +47,8 @@ more tables follow and that the end of the transmission has been reached.
 
 Tables
 ======
+
+Tables begin with a table name and then header row.  pipe character. 
 
 Tables consist of a name, a table header containing column names, and
 rows containing primitive values as described above.
