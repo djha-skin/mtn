@@ -1,6 +1,8 @@
 Multiple Table Notation, version 2.1.0
 --------------------------------------
 
+EDIT: I have recently taken renewed interest in MTN for a project In working on. Watch this space for updates.
+
 Multiple Table Notation is a format for communicating multiple tables at once
 using unicode text in a single file or transmission. It is abbreviated MTN.
 This abbreviation may be pronounced "mountain", or at least that's how I like
