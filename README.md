@@ -17,9 +17,11 @@ column names are separated with a pipe/dash line.
 
 strings may backslash pipes and whitespace but cannot be quoted.
 
-empty cells are nil. t/f and JSON numbers.
+empty cells are nil.T/F and JSON numbers. 
 
 that's enough.
+
+call it  Markdown Tables or MDT.
 
 EDIT: I have recently taken renewed interest in MTN for a project In working on. Watch this space for updates.
 
