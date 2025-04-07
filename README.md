@@ -31,6 +31,8 @@ Tables
 Tables consist of a name, a table header containing column names, and
 rows containing primitive values as described above.
 
+column headers and rows constitute _records_. A record is a line in the file which contains _fields_, it collections of characters. These fields are separated by _separations_, which consist  either of  which must  be non empty and not be one of the following characters: `[A-Za-z0-9-+._"]`. In particular separation characters are whitespace and commas.
+
 The first line contains a table name, which starts with an alphabetic character
 or underscore (`_`) and may contain alphanumeric characters and the underscore
 character (`_`). At the end of the table name, a newline character is expected,
@@ -38,7 +40,7 @@ ending the table name line.
 
 The next line contains a table header. Each column in the table has an
 associated name and these names are found within the table header. They are
-separated from each other by one or more tab characters and the line is ended
+separated from each other by one or more separation characters and the line is ended
 with a newline. The column names follow the same format as the table name.
 
 The next lines, if non-empty, constitute the rows within the table, one row per
@@ -75,8 +77,7 @@ must conform to this regular expression:
     ^-?+?(0|[1-9][0-9]+)(\.[0-9]+)?([Ee][+-]?(0|[1-9][0-9]+))?$
 ```
 
-Strings are represented as simply a string of characters prefixed with a single
-quotation mark character (`'`). Backslash escaping is supported, so that upon
+Strings are represented as exactly as they are in JSON. Backslash escaping is supported, so that upon
 deserialization, the sequence `\n` translates to a newline character, `\r`
 translates to a carriage return character, `\t` translates into a tab
 character, and `\\` translates to a backslash. Nothing else need be escaped. In
